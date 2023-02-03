@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "cb64e02d-6f79-4d44-a4c1-266934c9f4ba",
+		"name": "Drone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3753279"
+	},
+	"item": [
+		{
+			"name": "registration-drone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"serialNumber\":\"DR_20\", \r\n    \"model\":\"Lightweight\", \r\n   \"weight\":500,\r\n   \"batteryCapacity\":50,\r\n   \"state\":\"IDLE\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8088/registration-drone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"registration-drone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drones/idle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/drones/idle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"drones",
+						"idle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/assign/medication-to-drone",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1@admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"droneId\":1,\r\n    \"medicationId\":3\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8088/assign/medication-to-drone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"assign",
+						"medication-to-drone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drone/medications",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1@admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/drone/medications/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"drone",
+						"medications",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drone/battery-level",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1@admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/drone/battery-level/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"drone",
+						"battery-level",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
