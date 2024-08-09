@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>drone</artifactId>
+    <artifactId>libraryManagement</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>drone</name>
-    <description>drone</description>
+    <name>libraryManagement</name>
+    <description>libraryManagement</description>
     <properties>
         <java.version>8</java.version>
     </properties>
@@ -48,6 +48,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
     </dependencies>
 

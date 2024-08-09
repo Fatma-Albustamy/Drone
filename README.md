@@ -4,18 +4,21 @@ Requirements
 
 Java 8
 
-Java IDE (intellij)
+Java IDE (e.g., IntelliJ IDEA)
 
 in-memory database H2 
 
 Postman(For testing )
 
+Attachments:
 
-**Steps by step for building and runing the project locally**
+Postman collection file: "LibraryManagement.postman_collection.json"
+
+**Steps to Build and Run the Project Locally**
 
 ****Database credentials****
 
-Path: http://localhost:8088/h2
+Path: http://localhost:8099/h2
 
 UserName: sa
 
@@ -27,17 +30,23 @@ UserName: admin
 
 Password: 1@admin
 
-I attached Postman collection for testing 
-
-I create scheduler configurable in applications.properties
-
-I apply unit testing using mockito
+**Postman Testing** 
 
 
+Use the attached Postman collection for API testing.
 
+**Features Implemented** 
 
+Unit testing with Mockito
 
+Logging with AOP
 
+Basic authentication
 
+Spring validation
+
+Exception handling
+
+Cashing
 
 
